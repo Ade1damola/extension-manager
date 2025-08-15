@@ -105,3 +105,7 @@ export const EXTENSION_LIST = [
     isActive: false,
   },
 ]
+
+export const REMOVE = (index) => {
+  setExtensions(prevExtensions => prevExtensions.filter((_, i) => i !== index));
+};

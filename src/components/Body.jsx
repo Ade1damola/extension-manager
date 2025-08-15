@@ -1,5 +1,6 @@
 import { FILTERS } from "../constants";
 import { EXTENSION_LIST as EXTENSIONS_DATA } from "../constants";
+import { REMOVE } from "../constants";
 import { useState, useMemo } from 'react';
 
 
@@ -59,7 +60,7 @@ const Body = () => {
                 </div>
               </div>
               <div className="flex justify-between items-center">
-                <button className="text-sm bg-[#374151] p-3 rounded-xl">Remove</button>
+                <button className="text-sm bg-[#374151] p-3 rounded-xl" onClick={() => removeExtension(realIndex)}>Remove</button>
                 <label className="relative w-20 h-10 rounded-full cursor-pointer inline-block">
                   <input
                     type="checkbox"
