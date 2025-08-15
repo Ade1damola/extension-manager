@@ -27,7 +27,7 @@ const Body = () => {
   return (
     <div>
       {/* Header */}
-      <div className="flex flex-wrap items-center justify-between mt-20 mb-6 gap-4">
+      <div className="flex flex-wrap items-center justify-between mt-10 mb-6 gap-4">
         <h1 className="text-3xl text-white font-semibold">Extensions Lists</h1>
         <div className="flex space-x-2">
           {FILTERS.map(filter => (
