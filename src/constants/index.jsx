@@ -106,6 +106,6 @@ export const EXTENSION_LIST = [
   },
 ]
 
-export const REMOVE = (index) => {
-  setExtensions(prevExtensions => prevExtensions.filter((_, i) => i !== index));
-};
+// export const remove = (index) => {
+//   setExtensions(prevExtensions => prevExtensions.filter((_, i) => i !== index));
+// };

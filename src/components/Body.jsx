@@ -1,6 +1,6 @@
 import { FILTERS } from "../constants";
 import { EXTENSION_LIST as EXTENSIONS_DATA } from "../constants";
-import { REMOVE } from "../constants";
+// import { remove } from "../constants";
 import { useState, useMemo } from 'react';
 
 
@@ -16,6 +16,10 @@ const Body = () => {
         ? item.isActive: !item.isActive
     );
   }, [currentFilter, extensions]);
+
+  const remove = (index) => {
+  setExtensions(prevExtensions => prevExtensions.filter((_, i) => i !== index));
+  };
 
   const toggleActive = (index) => {
     setExtensions(prevExtensions => {
@@ -60,7 +64,7 @@ const Body = () => {
                 </div>
               </div>
               <div className="flex justify-between items-center">
-                <button className="text-sm bg-[#374151] p-3 rounded-xl" onClick={() => removeExtension(realIndex)}>Remove</button>
+                <button className="text-sm bg-[#374151] p-3 rounded-xl cursor-pointer hover:bg-red-500" onClick={() => remove(realIndex)}>Remove</button>
                 <label className="relative w-20 h-10 rounded-full cursor-pointer inline-block">
                   <input
                     type="checkbox"
